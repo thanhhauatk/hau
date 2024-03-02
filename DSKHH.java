@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-//TODO Auto-generated method stub
+
 public class DSKH {
 
     ArrayList<KhachHang> list;
@@ -13,7 +13,7 @@ public class DSKH {
         list = new ArrayList<>();
                     }
 
-                    public int add(KhachHang khachhang) {
+                    public void add(KhachHang khachhang) {
                         list.add(khachhang);
                     }
 
@@ -48,7 +48,7 @@ public class DSKH {
         int n = 0;
         for (KhachHang khachHang : list) {
             if (khachHang instanceof KhachHangNuocNgoai) {
-                tong += khachHang.tinhTien();
+                tong =+ khachHang.tinhTien();
                 ++n;
             }
         }
@@ -72,14 +72,14 @@ public class DSKH {
                     System.out.println("""
                                        =====MENU=====
                                        1. Nhap hoa don
-                                       2. xuaaa hoa doo
+                                       2. xuat hoa don
                                        3. Tinh tong so luong cho tung loai khach hang
                                        4. Tinh trung binh thanh tien cua khach hang nuoc ngoai
                                        5. Xuat ra cac hoa don thang 5 nam 2013
                                        0.Thoat
                                        Nhap lua chon: """);
                     choose = Integer.parseInt(sc.nextLine());
-                    if (choose >= 0 & choose <= 5) {
+                    if (choose >= 0 && choose <= 5) {
                         break;
                     } else {
                         System.err.println("Nhap lai");
@@ -110,7 +110,7 @@ System.err.println("Nhap lai");
                         }
                     }
 
-                    if (choose1 = 1) {
+                    if (choose1 == 1) {
                         KhachHang kh = new KhachHangVietNam();
                         kh.input();
                         list.add(kh);
@@ -135,7 +135,8 @@ System.err.println("Nhap lai");
                                    1. Khach Hang Viet Nam
                                    2. Khach Hang Nuoc Ngoai
                                    Nhap lua chon: """);
-                        c = Integer.parseInt(sc.nextInt());
+                        c = Integer.parseInt(sc.nextLine
+                                             ());
                         if (c >= 1 && c <= 2) {
                             break;
                         } else {
